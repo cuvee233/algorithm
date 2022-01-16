@@ -1,7 +1,7 @@
 package com.weiyi.sort.sequencer;
 
 /**
- * desc: 快速排序
+ * desc: 快速排序实现。时间复杂度O（n²）
  *
  * @author yuanwei
  * @version 1.0
@@ -40,11 +40,14 @@ public class QuickSort implements AbstractSort {
         // 遍历整个数组
         while (left < right) {
 
+            // 如果左边元素比标准值小，左边指针右移
             while (left < right && nums[left] < standard) {
                 left++;
             }
+            // 当前左边元素大于标准值，移动到最后
             nums[right] = nums[left];
 
+            // 如果右边元素大于等于标准值，右边指针左移
             while (left < right && nums[right] >= standard) {
                 right--;
             }
@@ -59,37 +62,4 @@ public class QuickSort implements AbstractSort {
 
         return left;
     }
-
-
-//    public static void quickSort(int[] arr) {
-//        qsort(arr, 0, arr.length - 1);
-//    }
-
-//    private static void qsort(int[] arr, int low, int high) {
-//        if (low < high) {
-//            //将数组分为两部分
-//            int pivot = partition(arr, low, high);
-//            //递归排序左子数组
-//            qsort(arr, low, pivot - 1);
-//            //递归排序右子数组
-//            qsort(arr, pivot + 1, high);
-//        }
-//    }
-
-//    private static int partition(int[] arr, int low, int high) {
-//        //枢轴记录
-//        int pivot = arr[low];
-//        while (low < high) {
-//            while (low < high && arr[high] >= pivot) --high;
-//            //交换比枢轴小的记录到左端
-//            arr[low] = arr[high];
-//            while (low < high && arr[low] <= pivot) ++low;
-//            //交换比枢轴小的记录到右端
-//            arr[high] = arr[low];
-//        }
-//        //扫描完成，枢轴到位
-//        arr[low] = pivot;
-//        //返回的是枢轴的位置
-//        return low;
-//    }
 }

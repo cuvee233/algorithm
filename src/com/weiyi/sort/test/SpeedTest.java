@@ -2,12 +2,13 @@ package com.weiyi.sort.test;
 
 import com.weiyi.sort.sequencer.AbstractSort;
 import com.weiyi.sort.sequencer.MergeSort;
+import com.weiyi.sort.sequencer.QuickSort;
 import com.weiyi.sort.utils.ArrayUtils;
 
 import java.util.Arrays;
 
 /**
- * desc: 排序时间测试
+ * desc: 排序算法时间测试
  *
  * @author yuanwei
  * @version 1.0
@@ -16,7 +17,7 @@ import java.util.Arrays;
 public class SpeedTest {
 
     public static void main(String[] args) {
-        AbstractSort mySort = new MergeSort();
+        AbstractSort mySort = new QuickSort();
 
         // 排序的次数
         int sortCount = 5000;
@@ -26,7 +27,7 @@ public class SpeedTest {
         long start = System.currentTimeMillis();
         for (int i = 0; i < sortCount; i++) {
             int[] arr = ArrayUtils.generateRandomValueArray(maxSize, maxValue);
-            mySort.sort(arr);
+//            mySort.sort(arr);
             Arrays.sort(arr);
         }
 
