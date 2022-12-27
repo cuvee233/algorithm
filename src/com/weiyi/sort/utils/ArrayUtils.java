@@ -11,6 +11,12 @@ import java.util.Arrays;
  */
 public class ArrayUtils {
 
+    public static void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     public static void printArr(int[] nums) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
