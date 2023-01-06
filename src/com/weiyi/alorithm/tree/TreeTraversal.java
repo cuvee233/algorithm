@@ -63,8 +63,8 @@ public class TreeTraversal {
         // 后序 左右中 8,9,4,10,11,5,2,12,13,6,14,15,7,3,1
 
         TreeTraversal treeTraversal = new TreeTraversal();
-        List<List<Integer>> lists = treeTraversal.levelOrder(treeNode1);
-        lists.forEach(System.out::println);
+//        List<List<Integer>> lists = treeTraversal.levelOrder(treeNode1);
+//        lists.forEach(System.out::println);
     }
 
 
@@ -76,7 +76,7 @@ public class TreeTraversal {
      * @param root 头节点
      * @return 层序
      */
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) {
             return Collections.emptyList();
         }
