@@ -23,6 +23,12 @@ public class ArrayUtils {
         arr[j] = temp;
     }
 
+    public static void swap(char[] arr, int i, int j) {
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     public static void printArr(int[] nums) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
