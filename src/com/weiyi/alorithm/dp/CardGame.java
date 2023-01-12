@@ -1,4 +1,4 @@
-package com.weiyi.alorithm.recusion.dp;
+package com.weiyi.alorithm.dp;
 
 /**
  * 纸牌游戏，给定一个arr数组，数组里面每个元素是纸牌的点数，然后你和你的朋友没每人从最左或最右拿一张牌，

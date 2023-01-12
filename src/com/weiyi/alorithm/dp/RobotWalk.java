@@ -1,4 +1,4 @@
-package com.weiyi.alorithm.recusion.dp;
+package com.weiyi.alorithm.dp;
 
 import java.util.Arrays;
 
@@ -18,8 +18,8 @@ public class RobotWalk {
         int step = 6;
         int[][] dp = new int[n + 1][step + 1];
 
-        for (int i = 0; i < dp.length; i++) {
-            Arrays.fill(dp[i], -1);
+        for (int[] ints : dp) {
+            Arrays.fill(ints, -1);
         }
 
         System.out.println(robotWalk.getGroupCount(n, start, distance, step, dp));
